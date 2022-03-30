@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\adminController;
+use  App\Http\Controllers\Backend\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,14 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::get('/admin/logout',[adminController::class,'Logout'])->name('admin.logout');
+
+
+// All routes for User ManageMent
+
+
+
+Route::prefix('users')->group(function(){
+
+    Route::get('/view',[UserController::class,'UserView'])->name('user.view');
+
+});
