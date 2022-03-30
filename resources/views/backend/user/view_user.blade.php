@@ -40,11 +40,11 @@
 					  <table id="example1" class="table table-bordered table-striped">
 						<thead>
 							<tr>
-								<th>SL</th>
+								<th width="5%">SL</th>
 								<th>Role</th>
 								<th>Name</th>
 								<th>Email</th>
-								<th>Action</th>
+								<th width="25%" >Action</th>
 								
 							</tr>
 						</thead>
@@ -52,7 +52,7 @@
                             @foreach($allData as $key=> $user)
 							<tr>
 								<td>{{$key+1}}</td>
-								<td></td>
+								<td>{{$user->usertype}}</td>
 								<td>{{$user->name}}</td>
 								<td>{{$user->email}}</td>
 								<td>
