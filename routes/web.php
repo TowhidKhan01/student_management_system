@@ -6,6 +6,9 @@ use  App\Http\Controllers\Backend\UserController;
 use  App\Http\Controllers\Backend\ProfileController;
 use App\Http\Controllers\Backend\Setup\StudentClassController;
 use App\Http\Controllers\Backend\Setup\StudentYearController;
+use App\Http\Controllers\Backend\Setup\StudentGroupController;
+use App\Http\Controllers\Backend\Setup\StudentShiftController;
+use App\Http\Controllers\Backend\Setup\FeeCategoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -86,4 +89,56 @@ Route::prefix('setups')->group(function () {
     Route::post('student/year/update{id}', [StudentYearController::class, 'StudentYearUpdate'])->name('update.year.class');
 
     Route::get('student/year/delete{id}', [StudentYearController::class, 'StudentYearDelete'])->name('student.year.delete');
+
+
+    // Student Group Routes
+
+
+    Route::get('student/group/view', [StudentGroupController::class, 'ViewGroup'])->name('student.group.view');
+
+    Route::get('student/group/add', [StudentGroupController::class, 'StudentGroupAdd'])->name('student.group.add');
+
+    Route::post('student/group/store', [StudentGroupController::class, 'StudentGroupStore'])->name('store.student.group');
+
+    Route::get('student/group/edit{id}', [StudentGroupController::class, 'StudentGroupEdit'])->name('student.group.edit');
+
+    Route::post('student/group/update{id}', [StudentGroupController::class, 'StudentGroupUpdate'])->name('update.group.class');
+
+    Route::get('student/group/delete{id}', [StudentGroupController::class, 'StudentGroupDelete'])->name('student.group.delete');
+
+
+
+
+    // Student Shift Routes
+
+
+    Route::get('student/shift/view', [StudentShiftController::class, 'ViewShift'])->name('student.shift.view');
+
+    Route::get('student/shift/add', [StudentShiftController::class, 'StudentShiftAdd'])->name('student.shift.add');
+
+    Route::post('student/shift/store', [StudentShiftController::class, 'StudentShiftStore'])->name('store.student.shift');
+
+    Route::get('student/shift/edit{id}', [StudentShiftController::class, 'StudentShiftEdit'])->name('student.shift.edit');
+
+    Route::post('student/shift/update{id}', [StudentShiftController::class, 'StudentShiftUpdate'])->name('update.student.shift');
+
+    Route::get('student/shift/delete{id}', [StudentShiftController::class, 'StudentShiftDelete'])->name('student.shift.delete');
+
+
+
+
+    // Fee Category Routes
+
+
+    Route::get('fee/category/view', [FeeCategoryController::class, 'ViewFeeCat'])->name('fee.category.view');
+
+    Route::get('fee/category/add', [FeeCategoryController::class, 'FeeCategoryAdd'])->name('fee.category.add');
+
+    Route::post('fee/category/store', [FeeCategoryController::class, 'FeeCategorytStore'])->name('store.fee.category');
+
+    Route::get('fee/category/edit{id}', [FeeCategoryController::class, 'StudentFeeEdit'])->name('student.fee.edit');
+
+    Route::post('fee/category/update{id}', [FeeCategoryController::class, 'StudentFee_Cat_Update'])->name('update.fee.category');
+
+    Route::get('fee/category/delete{id}', [FeeCategoryController::class, 'StudentFee_Cat_Delete'])->name('student.fee.delete');
 });

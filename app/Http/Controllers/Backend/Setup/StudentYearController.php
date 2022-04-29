@@ -71,6 +71,7 @@ class StudentYearController extends Controller
         $user = StudentYear::find($id);
         $user->delete();
 
+         
           
         $notification = array(
             'message' => 'Student Year Deleted Succesfully',
