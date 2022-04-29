@@ -9,7 +9,7 @@
             <!-- Basic Forms -->
             <div class="box">
                 <div class="box-header with-border">
-                    <h4 class="box-title">Add Fee Category</h4>
+                    <h4 class="box-title">Add School Subject</h4>
                     <!-- <h6 class="box-subtitle">Bootstrap Form Validation check the <a class="text-warning" href="http://reactiveraven.github.io/jqBootstrapValidation/">official website </a></h6> -->
                 </div>
                 <!-- /.box-header -->
@@ -17,7 +17,7 @@
                     <div class="row">
                         <div class="col">
 
-                            <form method="post" action="{{route('store.fee.category')}}">
+                            <form method="post" action="{{route('store.school.subject')}}">
                                 @csrf
 
                                 <div class="row">
@@ -28,7 +28,7 @@
                                         <!-- 2nd Row -->
 
                                         <div class="form-group">
-                                            <h5>Fee Category Name<span class="text-danger">*</span></h5>
+                                            <h5>Subject Name<span class="text-danger">*</span></h5>
                                             <div class="controls">
                                                 <input type="text" name="name" required class="form-control">
                                                 @error('')

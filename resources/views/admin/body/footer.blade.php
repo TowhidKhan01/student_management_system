@@ -11,5 +11,5 @@
 		  </li>
 		</ul>
     </div>
-	  &copy; 2020 <a href="#">Psd to Html Expert</a>. All Rights Reserved.
+	  &copy; 2022 <a href="#">Developed By Towhid Khan</a>. All Rights Reserved.
   </footer>
