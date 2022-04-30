@@ -30,7 +30,7 @@ $route = Route::current()->getName();
         </a>
       </li>
       <!-- Menu- 01 start -->
-
+      @if(Auth::user()->role == 'Admin')
       <li class="treeview {{($prefix == '/users')?'active':'' }}">
         <a href="#">
           <i data-feather="message-circle"></i>
@@ -45,7 +45,7 @@ $route = Route::current()->getName();
         </ul>
       </li>
       <!-- Menu- 01 end -->
-
+      @endif
       <!-- Manage Profile start -->
       <li class="treeview {{($prefix == '/profile')?'active':'' }}">
         <a href="#">
@@ -59,7 +59,7 @@ $route = Route::current()->getName();
           <li><a href="{{route('password.view')}}"><i class="ti-more"></i>Change Password</a></li>
         </ul>
       </li>
-       <!-- Manage Profile end -->
+      <!-- Manage Profile end -->
 
       <li class="treeview {{($prefix == '/setups')?'active':'' }}">
         <a href="#">
@@ -82,7 +82,29 @@ $route = Route::current()->getName();
           <li><a href="{{route('school.subject.view')}}"><i class="ti-more"></i>School Subject</a></li>
           <li><a href="{{route('assign.subject.view')}}"><i class="ti-more"></i>Assign Subject</a></li>
           <li><a href="{{route('designation.view')}}"><i class="ti-more"></i>Designation</a></li>
-          
+
+        </ul>
+      </li>
+      <!-- Student Management Part -->
+
+      <li class="treeview {{($prefix == '/students')?'active':'' }}">
+        <a href="#">
+          <i data-feather="mail"></i> <span>Student Management</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-right pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="{{route('student.registration.view')}}"><i class="ti-more"></i>Student Registration</a></li>
+
+          <li><a href="{{ route('roll.generate.view') }}"><i class="ti-more"></i>Roll Generate</a></li>
+          <li><a href="{{ route('registration.fee.view') }}"><i class="ti-more"></i>Registration Fee </a></li>
+          <li><a href="{{ route('monthly.fee.view') }}"><i class="ti-more"></i>Monthly Fee </a></li>
+          <li><a href="{{ route('exam.fee.view') }}"><i class="ti-more"></i>Exam Fee </a></li>
+
+
+
+
         </ul>
       </li>
 
