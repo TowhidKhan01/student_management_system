@@ -110,7 +110,7 @@ $route = Route::current()->getName();
 
 
 
-      <li class="treeview">
+      <!-- <li class="treeview">
         <a href="#">
           <i data-feather="file"></i>
           <span>Pages</span>
@@ -125,11 +125,11 @@ $route = Route::current()->getName();
           <li><a href="faq.html"><i class="ti-more"></i>FAQs</a></li>
           <li><a href="timeline.html"><i class="ti-more"></i>Timeline</a></li>
         </ul>
-      </li>
+      </li> -->
 
-      <li class="header nav-small-cap">User Interface</li>
-
-      <li class="treeview">
+      <!-- <li class="header nav-small-cap">User Interface</li> -->
+      
+      <!-- <li class="treeview">
         <a href="#">
           <i data-feather="grid"></i>
           <span>Components</span>
@@ -147,7 +147,7 @@ $route = Route::current()->getName();
           <li><a href="components_nestable.html"><i class="ti-more"></i>Nestable</a></li>
           <li><a href="components_progress_bars.html"><i class="ti-more"></i>Progress Bars</a></li>
         </ul>
-      </li>
+      </li> -->
 
 
 

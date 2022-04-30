@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\adminController;
-use  App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\Backend\UserController;
 use  App\Http\Controllers\Backend\ProfileController;
 use App\Http\Controllers\Backend\Setup\StudentClassController;
 use App\Http\Controllers\Backend\Setup\StudentYearController;
